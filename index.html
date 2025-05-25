@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img class="mb-3" src="bus-icon.webp" alt="" />
+      <h1 class="mb-3 mt-4 d-inline-block align-middle">Bus Arrival App</h1>
+      <div class="form-group">      
+        <div class="mb-4">
+          <label class="mb-3">Most Popular Bus Stops : </label>
+          <div class="btn-group" role="group" aria-label="Popular bus stops">
+            <button type="button" class="btn btn-outline-primary" onclick="selectBusStop('83139')">83139</button>
+            <button type="button" class="btn btn-outline-primary" onclick="selectBusStop('82009')">82009</button>
+            <button type="button" class="btn btn-outline-primary" onclick="selectBusStop('84009')">84009</button>
+          </div>
+        </div>
+        <label for="busStopID" class="fw-normal mb-2">Bus Stop ID</label>
+        <input
+          type="text"
+          class="form-control mb-3 w-100"
+          id="busStopID"
+          placeholder="Enter a bus stop ID"
+        />
+        <button class="btn-primary mb-4" onclick=" getBusTiming()">
+          Show Arrivals
+          
+      </div>
+
+      <table class="table" id="busTable">
+        <thead>
+          <tr>
+            <th>Bus No.</th>
+            <th>Operator</th>
+            <th>Next Arrival</th>
+          </tr>
+        </thead>
+        <tbody id="busList"></tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
